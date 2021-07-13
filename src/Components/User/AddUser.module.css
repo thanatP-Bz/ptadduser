@@ -1,0 +1,19 @@
+.input {
+  max-width: 40%;
+  width: 100%;
+  margin: 200px auto;
+  padding: 2rem;
+}
+
+.input label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input input {
+  display: block;
+  padding: 0.3rem;
+  outline: none;
+  width: 100%;
+  margin-bottom: 1rem;
+}
