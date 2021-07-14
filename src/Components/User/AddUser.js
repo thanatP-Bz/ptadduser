@@ -27,7 +27,7 @@ const AddUser = (props) => {
       /* this one is return a string not a number we should add a plus sign*/
       return;
     }
-    console.log(enteredUserName, enteredUserAge);
+    props.onAddUser(enteredUserName, enteredUserAge);
     setEnteredUserName("");
     setEnteredUserAge("");
   };
