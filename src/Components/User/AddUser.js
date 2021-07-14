@@ -4,8 +4,8 @@ import Card from "../UI/Card";
 import classes from "./AddUser.module.css";
 
 const AddUser = (props) => {
-  const [enteredUserName, setEnteredUserName] = useState();
-  const [enteredUserAge, setEnteredUserAge] = useState();
+  const [enteredUserName, setEnteredUserName] = useState("");
+  const [enteredUserAge, setEnteredUserAge] = useState("");
 
   const changeUserNameHandler = (event) => {
     setEnteredUserName(event.target.value);
@@ -17,10 +17,21 @@ const AddUser = (props) => {
 
   const addUserHandler = (event) => {
     event.preventDefault();
+    if (
+      enteredUserName.trim().lenth === 0 ||
+      enteredUserAge.trim().lenth === 0
+    ) {
+      return;
+    }
+    if (+enteredUserAge < 1) {
+      /* this one is return a string not a number we should add a plus sign*/
+      return;
+    }
     console.log(enteredUserName, enteredUserAge);
     setEnteredUserName("");
     setEnteredUserAge("");
   };
+
   return (
     <Card className={classes.input}>
       <form onSubmit={addUserHandler}>
