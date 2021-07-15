@@ -1,16 +1,17 @@
 .button {
   padding: 10px 20px;
   border: none;
-  background-color: #39d377;
+  background-color: #0ebd54;
   color: #ffffff;
   display: inline-block;
   font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .button:hover {
-  background-color: #0ebd54;
+  background-color: #3bd679;
 }
 
 .button:focus {
